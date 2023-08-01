@@ -13,7 +13,7 @@ app.use(express.static("public"));
 app.set("view engine","ejs");
 app.use(bodyparser.urlencoded({extended:true}));
 
-mongoose.connect("mongodb://127.0.0.1:27017/userDB");
+mongoose.connect('mongodb+srv://Admin:shubh123@cluster0.ga5afas.mongodb.net/todolistDB',{useNewUrlParser:true});
 
 const userSchema=new mongoose.Schema({
     email:String,
